@@ -2,6 +2,15 @@ import React from 'react';
 import AWS from 'aws-sdk';
 import BackButton from '../backButton/backButton';
 
+import { 
+    FacebookShareButton,
+    WhatsappShareButton,
+    TwitterShareButton,
+    FacebookIcon,
+    WhatsappIcon,
+    TwitterIcon
+} from 'react-share';
+
 import './share.scss';
 
 const S3_BUCKET = 'team-23';
@@ -77,12 +86,15 @@ class Share extends React.Component {
         })
     }
 
-
     render() {
         const FB = 'images/icons/FBicon.png';
         const instegram = 'images/icons/InstIcon.png';
         const twitter = 'images/icons/TwitterIcon.png';
         const whatsapp = 'images/icons/whatsappIcon.png';
+
+        const sharedUrl = 'https://dynaimage.cdn.cnn.com/cnn/q_auto,w_900,c_fill,g_auto,h_506,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F181010131059-australia-best-beaches-cossies-beach-cocos3.jpg';
+
+    
 
         return (
             <div className='share-options-container'>
@@ -93,26 +105,39 @@ class Share extends React.Component {
                         <img style={{ width: '300px', height: '300px' }} src={this.props.history.location.state.shareUrl}></img>
                     </div>
                 </div>
+
                 <div className='share-options-drawer'>
                     <div className='title'>שתפו ב</div>
                     {/* <a href={`https://www.facebook.com/sharer.php?imageurl='https://team-23.s3.amazonaws.com/test.png'}`}>clicklcicl</a> */}
                     <div className='share-options'>
                         {/* <div onClick={this.uploadFile}>upload to AWS ?</div> */}
-                        <div className='share-option-container'>
+                        {/* <div className='share-option-container'>
                             <div className='share-option' style={{ backgroundImage: `url(${FB})` }}
                                 onClick={() => this.shareImage('facebook')} />
+                        </div> */}
+
+                        <div className='share-option-container'>
+                        <FacebookShareButton
+                             url = {sharedUrl}  >
+                            <FacebookIcon size={50} round={true}  ></FacebookIcon>
+                        </FacebookShareButton>
+                        </div>
+
+                        <div className='share-option-container'>
+                            {/* <div className='share-option' style={{ backgroundImage: `url(${instegram})` }} */}
+                                {/* onClick={() => this.shareImage('instagrem')} /> */}
                         </div>
                         <div className='share-option-container'>
-                            <div className='share-option' style={{ backgroundImage: `url(${instegram})` }}
-                                onClick={() => this.shareImage('instagrem')} />
+                            <WhatsappShareButton
+                            url={sharedUrl} >
+                                <WhatsappIcon size={50} round={true}/>
+                            </WhatsappShareButton>
                         </div>
                         <div className='share-option-container'>
-                            <div className='share-option' style={{ backgroundImage: `url(${whatsapp})` }}
-                                onClick={() => this.shareImage('whatsapp')} />
-                        </div>
-                        <div className='share-option-container'>
-                            <div className='share-option' style={{ backgroundImage: `url(${twitter})` }}
-                                onClick={() => this.shareImage('twitter')} />
+                        <TwitterShareButton
+                            url={sharedUrl} >
+                                <TwitterIcon size={50} round={true}/>
+                            </TwitterShareButton>
                         </div>
                     </div>
                 </div>
