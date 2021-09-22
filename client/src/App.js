@@ -11,6 +11,8 @@ import TemplateEdit from './templateEdit/template-edit';
 import Share from './share/share';
 import About from './about/about';
 import Footer from './footer/footer'
+import SignUp from './auth/SignUp';
+import Login from './auth/Login';
 
 //import BackButton from './backButton/backButton';
 import ThankYouForComing from './thankYouForComing/thankYouForComing';
@@ -30,6 +32,8 @@ function App() {
         <Route exact path='/share' component={Share} />
         <Route exact path='/thankYouForComing' component={ThankYouForComing} />
         <Route exact path='/About' component={About} />
+        <Route exact path='/signup' component={SignUp} />
+        <Route exact path='/login' component={Login} />
         <Route path='*' component={() => '404 Not Found'} />
       </Switch>
       <Footer></Footer>
