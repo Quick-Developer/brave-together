@@ -9,7 +9,7 @@ const mockData = [
     {}
 ]
 
-export default function SelectedQuotes({ selectedQuotes, isShown }) {
+export default function SelectedQuotes({ selectedQuotes, isShown  }) {
 
     const [testIsShown, setTestIsShown] = useState(true)
 
