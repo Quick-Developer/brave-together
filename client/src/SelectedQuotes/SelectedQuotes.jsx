@@ -1,7 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './SelectedQuotes.scss'
 import ExitIcon from './exit-icon.png'
-
 
 const mockData = [
     { txt: '"לי היה כדאי להישאר בחיים כשאר נולדו הבנים אמרתי לעצמי שאולי בכל זאת היה כדאי להישאר בחיים.\n הקמתי משפחה לתפארת - רק לא לי אלא לעם ישראל"' },
@@ -9,48 +8,49 @@ const mockData = [
     {}
 ]
 
-export default function SelectedQuotes({ selectedQuotes, isShown  }) {
-
-    const [testIsShown, setTestIsShown] = useState(true)
+export default function SelectedQuotes({ quotes }) {
 
     const onExit = (e) => {
-        setTestIsShown(false)
+        //back to testimony
+        console.log('exit');
     }
 
     const handleClick = (e) => {
+        //back to testimony - chose txt mode
         console.log(e);
     }
 
+    const publish = (quote) => {
+        //publish on social
+        console.log('quote:', quote);
+    }
+
     return (
-        <>
-            {
-                testIsShown && <div className='selected-quotes'>
-                    <div onClick={onExit} className='icon-container'>
-                        <img src={ExitIcon} className='pointer' />
-                    </div>
-                    <section className='content'>
-                        <h1>ציטוטים נבחרים</h1>
-                        <div className='quotes-container'>
-                            {
-                                mockData.map((currQuote, idx) => {
-                                    return <Quote key={idx}> {currQuote.txt}</Quote>
-                                })
-                            }
-                        </div>
-                        <div className='or-section'><span>או</span></div>
-                        <button onClick={handleClick} className='pointer'>סימון חופשי</button>
-                    </section>
+        <div className='selected-quotes'>
+            <div onClick={onExit} className='icon-container'>
+                <img src={ExitIcon} />
+            </div>
+            <section className='content'>
+                <h1>ציטוטים נבחרים</h1>
+                <div className='quotes-container'>
+                    {
+                        mockData.map(currQuote => {
+                            return <Quote publish={publish} quote={currQuote}></Quote>
+                        })
+                    }
                 </div>
-            }
-        </>
+                <div className='or-section'><span>או</span></div>
+                <button onClick={handleClick}>סימון חופשי</button>
+            </section>
+        </div>
     )
 }
 
 
-function Quote({ children }) {
+function Quote({ quote, publish }) {
     return (
-        <div className='quote'>
-            <p>{children}</p>
+        <div onClick={() => publish(quote)} className='quote'>
+            <p>{quote.txt}</p>
         </div>
     )
 }
