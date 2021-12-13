@@ -21,7 +21,7 @@ export default function SelectedQuotes({ quotes }) {
     return (
         <div className='selected-quotes'>
             <div onClick={onExit} className='icon-container'>
-                <img src={ExitIcon} />
+                <img src={ExitIcon} className='pointer' />
             </div>
             <section className='content'>
                 <h1>ציטוטים נבחרים</h1>
@@ -33,7 +33,7 @@ export default function SelectedQuotes({ quotes }) {
                     }
                 </div>
                 <div className='or-section'><span>או</span></div>
-                <button onClick={handleClick}>סימון חופשי</button>
+                <button onClick={handleClick} className='pointer'>סימון חופשי</button>
             </section>
         </div>
     )

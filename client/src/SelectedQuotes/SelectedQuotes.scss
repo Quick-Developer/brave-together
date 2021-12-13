@@ -66,9 +66,14 @@
     border-radius: 2px;
     margin: 0 22px 1rem;
     overflow: overlay;
+    background: #F5F5F5;
     p{
         direction: rtl;
         line-height: 28px;
         font-size: 16px;
     }
+}
+
+.pointer {
+    cursor: pointer;
 }
