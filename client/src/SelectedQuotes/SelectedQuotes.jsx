@@ -16,7 +16,7 @@ export default function SelectedQuotes({ quotes }) {
     }
 
     const handleClick = (e) => {
-        //back to testimony - chose txt mode
+        //back to testimony - choose txt mode
         console.log(e);
     }
 
@@ -27,7 +27,7 @@ export default function SelectedQuotes({ quotes }) {
 
     return (
         <div className='selected-quotes'>
-            <div onClick={onExit} className='icon-container'>
+            <div onClick={onExit} className='icon-container pointer'>
                 <img src={ExitIcon} />
             </div>
             <section className='content'>
@@ -40,7 +40,7 @@ export default function SelectedQuotes({ quotes }) {
                     }
                 </div>
                 <div className='or-section'><span>או</span></div>
-                <button onClick={handleClick}>סימון חופשי</button>
+                <button className='pointer' onClick={handleClick}>סימון חופשי</button>
             </section>
         </div>
     )
