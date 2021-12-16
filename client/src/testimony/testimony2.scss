@@ -1,0 +1,147 @@
+.testimony-container {
+  background-color: #ffffff;
+  padding: 27px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: right;
+
+  .prev-quotes-btn {
+    padding: 10px;
+    background: #cd531f;
+    color: #000000;
+    border: 0;
+    border-radius: 4px;
+    align-self: flex-end;
+  }
+
+  .testimony-hero-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 35px;
+
+    .hero-img {
+      width: 150px;
+      height: 150px;
+      background-color: #c4c4c4;
+      border-radius: 50%;
+      margin-inline-start: 14px;
+      display: flex;
+      align-items: center;
+      z-index: 10;
+      img {
+        width: 36.66%;
+      }
+    }
+
+    .hero-details {
+      padding: 30px 8px;
+      .sm-img {
+        height: 20px;
+        width: fit-content;
+        margin: 0;
+      }
+      .hero-name {
+        font-size: 1.25rem;
+        font-weight: bold;
+        margin-bottom: 18px;
+      }
+      .hero-author {
+        font-size: 0.875rem;
+        margin-bottom: 8px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 5px;
+      }
+      .date {
+        font-size: 0.75rem;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 5px;
+      }
+    }
+
+    .vector {
+      position: absolute;
+
+      &.top1-vector {
+        left: 160px;
+      }
+      &.top2-vector {
+        left: 150px;
+      }
+      &.bottom-vector {
+        bottom: -20px;
+        left: -20px;
+      }
+    }
+  }
+
+  .testimony-details {
+    padding: 0 6px;
+    line-height: 1.75rem;
+  }
+
+  .testimony-quotes {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+    background: #cccfe3;
+    min-height: 75px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    .chosen-quotes {
+      width: 90%;
+      background: #105e7d;
+      color: #ffffff;
+      line-height: 28px;
+      font-weight: 500;
+      text-align: center;
+      border-radius: 2px;
+      padding: 6px;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .choose-text {
+      width: 90%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      bottom: 9px;
+      p {
+        margin: 0;
+        font-weight: 500;
+        font-size: 1rem;
+        margin-inline-end: 10px;
+        line-height: 40px;
+      }
+      .add-btn {
+        text-align: center;
+        position: absolute;
+        height: 48px;
+        width: 48px;
+        right: 0;
+        overflow: hidden;
+        img {
+          position: absolute;
+          top: -62px;
+        }
+      }
+      &.chosen {
+        border-radius: 2px;
+        background-color: #cd531f;
+        margin-inline-end: 0;
+        color: #ffffff;
+      }
+    }
+  }
+}

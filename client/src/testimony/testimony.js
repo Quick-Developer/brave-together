@@ -4,7 +4,6 @@ import './testimony.scss';
 
 import mock from './mock';
 import BackButton from '../backButton/backButton';
-import axios from 'axios';
 
 const closeButtonIcon='images/icons/CloseIcon.png'
 
