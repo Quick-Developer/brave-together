@@ -13,6 +13,7 @@ import Share from './share/share';
 import About from './about/about';
 import Footer from './footer/footer'
 import Homepage from './homepage/homepage';
+import SelectedQuotes from './SelectedQuotes/SelectedQuotes';
 
 //import BackButton from './backButton/backButton';
 import ThankYouForComing from './thankYouForComing/thankYouForComing';
@@ -32,6 +33,7 @@ function App() {
         <Route exact path='/textEdit' component={TextEdit} />
         <Route exact path='/storyUpload' component={StoryUpload} />
         <Route exact path='/templateEdit' component={TemplateEdit} />
+        <Route exact path='/selectedQuotes' component={SelectedQuotes} />
         <Route exact path='/share' component={Share} />
         <Route exact path='/thankYouForComing' component={ThankYouForComing} />
         <Route exact path='/About' component={About} />
