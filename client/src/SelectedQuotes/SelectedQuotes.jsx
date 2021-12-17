@@ -12,16 +12,16 @@ export default function SelectedQuotes({ quotes }) {
 
     const onExit = (e) => {
         //back to testimony
-        console.log('exit');
+        
     }
 
     const handleClick = (e) => {
-        //back to testimony - choose txt mode
+        //back to testimony - choose txt mode.
         console.log(e);
     }
 
     const publish = (quote) => {
-        //publish on social
+        //continue publish on social
         console.log('quote:', quote);
     }
 
