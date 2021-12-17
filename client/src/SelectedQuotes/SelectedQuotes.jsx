@@ -11,7 +11,7 @@ const mockData = [
 export default function SelectedQuotes({ quotes }) {
 
     const onExit = (e) => {
-        //back to testimony
+        //back to testimony.
         
     }
 
