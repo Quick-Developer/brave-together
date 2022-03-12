@@ -1,0 +1,9 @@
+.Quotes{
+    padding: 5%;
+    background-color: aliceblue;
+    display: inline-block;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    height: fit-content;
+}

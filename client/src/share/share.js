@@ -14,6 +14,7 @@ import {
 } from 'react-share';
 
 import './share.scss';
+import HeaderMetaData from './HeaderMetaData/HeaderMetaData';
 
 const S3_BUCKET = 'imagestoshare';
 const REGION = 'us-east-2';
@@ -44,6 +45,7 @@ class Share extends React.Component {
     }
 
     componentDidMount() {
+        console.log(window.location.href)
         this.shareImage();
     }
 
@@ -99,15 +101,16 @@ class Share extends React.Component {
 
     render() {
         //  *** Change to finalUrl (url of image in S3) ***
-        const sharedUrl = 'https://dynaimage.cdn.cnn.com/cnn/q_auto,w_900,c_fill,g_auto,h_506,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F181010131059-australia-best-beaches-cossies-beach-cocos3.jpg';
-
+        const sharedUrl = this.state.finalUrl;
+        console.log(sharedUrl)
         return (
             <div className='share-options-container'>
+                <HeaderMetaData title="Title" description='Description' image={sharedUrl} />
                 <BackButton history={this.props.history}/>
                 <div className='share-options-title'>עצבו את מסר הגבורה שלכם.ן</div>
                 <div className='image-container'>
                     <div className='image-container-border'>
-                        <img style={{ width: '300px', height: '300px' }} src={this.props.history.location.state.shareUrl}></img>
+                        <img alt='img' style={{ width: '300px', height: '300px' }} src={this.props.history.location.state.shareUrl}></img>
                     </div>
                 </div>
 
@@ -118,21 +121,21 @@ class Share extends React.Component {
                     {/* <a href={`https://www.facebook.com/sharer.php?imageurl='https://team-23.s3.amazonaws.com/test.png'}`}>clicklcicl</a> */}
                     <div className='share-option-container'>
                         <FacebookShareButton
-                             url = {sharedUrl}  >
+                                url = {sharedUrl}  >
                             <FacebookIcon size={50} round={true}  ></FacebookIcon>
                         </FacebookShareButton>
                         </div>
-                  
+                    
                     <div className='share-option-container'>
                         <LinkedinShareButton
-                             url = {sharedUrl}  >
+                                url = {sharedUrl}  >
                             <LinkedinIcon size={50} round={true}  ></LinkedinIcon>
                         </LinkedinShareButton>
                         </div>
 
                         <div className='share-option-container'>
                             <WhatsappShareButton
-                            url={sharedUrl} >
+                            url={window.location.href} >
                                 <WhatsappIcon size={50} round={true}/>
                             </WhatsappShareButton>
                         </div>

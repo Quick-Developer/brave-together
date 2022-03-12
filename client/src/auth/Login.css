@@ -1,0 +1,51 @@
+.login .pcComponent {
+    display: block;
+}
+
+.login .name-container{
+    display: flex;
+}
+
+.login .first-name{
+    margin-left: 20px !important;
+}
+
+.login .MuiBox-root .css-bk9fzy{
+margin-bottom: 20px;
+}
+
+.login label  {
+width: 100%;
+display: flex;
+}
+
+.login .pcComponent Input,
+.login .pcComponent Label {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.login .phoneComponent {
+    display: none;
+    font-size: 14px
+}
+
+.login .phoneComponent .button {
+    margin-top: 10px;
+    width: 100%;
+    height: 50px;
+    font-size: 23px;
+    color: white
+}
+
+@media all and (max-width: 600px), (max-height: 550px) {
+
+    .login .pcComponent {
+        display: none;
+    }
+
+    .login .phoneComponent {
+        display: block;
+    }
+}

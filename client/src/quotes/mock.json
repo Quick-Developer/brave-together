@@ -1,0 +1,28 @@
+{
+    "quotes":[
+        {
+            "id":1,
+            "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam iaculis elit nec condimentum viverra. Aenean viverra, risus blandit hendrerit luctus, augue dui sagittis felis, nec aliquet urna leo vel risus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed euismod sit amet felis non sagittis. Duis eu finibus.",
+            "author":"הכתיבה כדרך חיים - הלינה בירנבואים",
+            "shares": "8"
+        },
+        {
+            "id":2,
+            "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam iaculis elit nec condimentum viverra. Aenean viverra, risus blandit hendrerit luctus, augue dui sagittis felis, nec aliquet urna leo vel risus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed euismod sit amet felis non sagittis. Duis eu finibus.",
+            "author":"הכתיבה כדרך חיים - הלינה בירנבואים",
+            "shares": "8"
+        },
+        {
+            "id":3,
+            "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam iaculis elit nec condimentum viverra. Aenean viverra, risus blandit hendrerit luctus, augue dui sagittis felis, nec aliquet urna leo vel risus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed euismod sit amet felis non sagittis. Duis eu finibus.",
+            "author":"הכתיבה כדרך חיים - הלינה בירנבואים",
+            "shares": "8"
+        },
+        {
+            "id":4,
+            "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam iaculis elit nec condimentum viverra. Aenean viverra, risus blandit hendrerit luctus, augue dui sagittis felis, nec aliquet urna leo vel risus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed euismod sit amet felis non sagittis. Duis eu finibus.",
+            "author":"הכתיבה כדרך חיים - הלינה בירנבואים",
+            "shares": "8"
+        }
+    ]
+}
