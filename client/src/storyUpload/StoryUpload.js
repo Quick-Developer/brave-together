@@ -1,144 +1,99 @@
-import React from "react";
-import BackButton from '../backButton/backButton';
-import axios from 'axios';
-// import ReactDOM from "react-dom";
+import React, { useState, useEffect } from 'react'
 import "./StoryUpload.css";
 
-class StoryUpload extends React.Component {
-  constructor(props) {
-    super(props);
+function StoryUpload() {
 
-    this.state = {
-      title: "",
-      description: "",
-      text: "",
-      date: "",
-      tags: [],
-      country: "Israel"
-    };
-  }
-
-  getCurrDate(){
-   
+    const [fields, setFields] = useState([]);
+    const [mainHeader, setMainHeader] = useState("");
+    const [showSubmit, setShowSubmit] = useState(false);
+    const [filledFields, setFilledFields] = useState({});
 
 
+    useEffect(() => {
+        setMainHeader("הכנס סיפור גבורה למאגר וצור את ההשראה הבאה");
+        setFields( //should update with server data 
+            [{ inputName: 'title', label: 'כותרת', tag: 'input', length: 100 },
+            { inputName: 'description', label: 'תוכן הסיפור ', tag: 'textarea', rows: '10', cols: '50' },
+            { inputName: 'story_img', label: ' העלה תמונה של גיבור/ת הסיפור ', tag: 'img' },
+            { inputName: 'type', label: 'סוג סיפור ', tag: 'select', options: ['קצר', 'בינוני ', 'ארוך'] },
+            { inputName: 'categories', label: 'תייג את הסיפור לנושא/ים המתאים/ים', tag: 'checkboxes', options: ['תיעוד', 'חגי ישראל ', 'אחר', 'תיעוד', 'חגי ישראל ', 'אחר', 'תיעוד', 'חגי ישראל ', 'אחר', 'תיעוד', 'חגי ישראל ', 'אחר'] }
+            ]);
 
-  }
+        setFilledFields({ //should update with server data 
+            title: "",
+            description: "",
+            story_img: "",
+            type: "",
+            categories: new Array(12).fill(false), //array length should be options.length
+        })
+    }, [])
 
-  componentDidMount() {
-    
-    
-    var today = new Date();
+    useEffect(() => {
+        if (filledFields.description && filledFields.description != "") {
+            setShowSubmit(true);
+        }else{
+            setShowSubmit(false);
+        }
+    }, [filledFields])
 
-    let year = today.getFullYear();
-    let month = (today.getMonth() + 1).toString().padStart(2, "0");
-    let day = today.getDate();
-
-    this.setState({date: year + "-" + month +  "-" + day}, () => {
-      console.log("date is " + this.state.date)
-    })
-    
-    // let token = localStorage.getItem('token');
-    
-    // console.log("in mount")   
-    // if (!token) {
-    //     this.props.history.push('/')
-    // }
-
-    // else {
-    //     axios.get("http://localhost:5000/stories", { 
-    //         auth: {
-    //             username: res.data.token
-    //         }
-    //     }).then(res => {
-    //         if (res.status == '200' || res.status == 'OK') {
-    //             console.log("aaaaaaaaaaaa")
-    //         } else {
-    //             this.props.history.push('/login');
-    //         }
-    //     });
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log("submitted:", filledFields);
     }
-    
 
-    // this.setState({stories: mock});
-// };
+    const handleChange = name => e => {
+        setFilledFields({ ...filledFields, [name]: e.target.value })
+    }
 
-// async handleSubmit(event) {
+    const handleCheckboxChange = (position, inputname) => {
+        const updatedCheckboxes = filledFields[inputname].map((item, index) =>
+            index === position ? !item : item
+        );
 
-  handleSubmit = async(event) => {
-    event.preventDefault();
-    
-    console.log("button clicked");
+        setFilledFields({ ...filledFields, [inputname]: updatedCheckboxes })
+    }
 
-    const storyDocument = {
-      "title": this.state.title,
-      "description": this.state.description,
-      "text": this.state.text,
-      "date": this.state.date,
-      "tags": this.state.tags,
-      "country": this.state.country
-  };
+    const handleImgChange = name => e => {
+        setFilledFields({ ...filledFields, [name]: e.target.files[0] });
+    }
 
-    let axiosConfig = {
-      auth: {username: 
-        "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MiwiZXhwIjoxNjMyNjg3Nzk5Ljk5NTIzM30.jFeXH4uyqJXXvYbcng8CfxYsl2pG6CMtYm8imao-X4Y"}     
-      };
-
-    console.log(storyDocument);
-    axios.post("http://localhost:5000/stories", storyDocument, axiosConfig) // calling api request to create a new story
-    .then(response =>{
-         console.log(response);
-         alert("!הסיפור הועלה בהצלחה");
-         this.props.history.push("/");
-    })   
-    .catch ( err =>{
-      console.log(err)
-      this.props.history.push("/storyUpload");
-    })
-  };
-
-
-  //Saving every change in object variable
-  handleInputChanges = (event) => {
-    this.setState({ [event.target.name]: event.target.value });
-  };
-
-  //Splitting the tags into array
-  handleTagsChange = (event) => {
-    let str = event.target.value;
-    this.setState({ tags: str.split(" ") });
-  };
-
-  render() {
     return (
-      <div className="story-container">
-        <form id="form">
-          <label for="title">כותרת</label>
-          <br></br>
-          <input type="text" id="title" name="title" onChange={this.handleInputChanges} required/>
-          <br />
-          <br />
-          <label for="story" className="content">תוכן</label>
-          <br></br>
-          <textarea id="story" name="text" rows="6" cols="23" onChange={this.handleInputChanges} required="required"
-           style={{ resize: "none" }}  />
-          <br />
-          <label for="title">תגיות</label>
-          <br></br>
-          <input type="text" id="tags"name="tags" onChange={this.handleTagsChange}/>
-          <p>רשמו מספר מילים מרכזיות מהסיפור על מנת לצבור חשיפה גבוהה יותר</p>
-          <br></br>
-          <div id="button">
-          <button type="submit" onClick={this.handleSubmit}
-            style={{
-              borderRadius: "8px"
-            }}
-          >העלאת הסיפור</button>
-          </div>
-        </form>
-      </div>
-    );
-  }
+        <div className="story-upload-container">
+            <h1 className="page-main-header">{mainHeader}</h1>
+            <form onSubmit={handleSubmit}>
+                {fields ? <>
+                    {fields.map((field, index) => <div className='input-container' key={index}>
+                        <label className="field-label" htmlFor={field.inputName}>{field.label}</label >
+
+                        {field.tag == 'input' ?
+                            <input onChange={handleChange(field.inputName)} value={filledFields[field.inputName]} className="input-field" name={field?.inputName} maxLength={field.length} /> : <></>}
+
+                        {field.tag == 'textarea' ?
+                            <textarea onChange={handleChange(field.inputName)} value={filledFields[field.inputName]} className="textarea-field" name={field.inputName} rows={field.rows} cols={field.cols}></textarea> : <></>}
+
+                        {field.tag == 'img' ? <input type="file" accept="image/*" onChange={handleImgChange(field.inputName)} className="img-upload-field" name={field.inputName} rows={field.rows} cols={field.cols} /> : <></>}
+
+                        {field.tag == 'select' ?
+                            <select name={field.inputName} onChange={handleChange(field.inputName)} value={filledFields[field.inputName]}>
+                                {field.options.map((selectoption, selectOptIndex) =>
+                                    <option value={selectoption} key={selectOptIndex}>{selectoption}</option>
+                                )}
+                            </select> : <></>}
+
+                        {field.tag == 'checkboxes' ? <div className="story-checkboxes">
+                            {field.options.map((checkboxoption, checkboxOptIndex) => <div key={checkboxOptIndex} className="story-checkbox">
+                                <input type="checkbox" id={checkboxOptIndex} name={checkboxOptIndex} value={checkboxoption} checked={filledFields[field.inputName][checkboxOptIndex]} onChange={() => handleCheckboxChange(checkboxOptIndex, field.inputName)} />
+                                <label htmlFor={checkboxOptIndex} > {checkboxoption}</label><br />
+                            </div>)}
+                        </div>
+                            : <></>}
+
+                    </div>)}
+                </> : <></>}
+                {showSubmit ? <button className="submit-story">צור סיפור</button> : <></>}
+            </form>
+        </div>
+    )
 }
 
 export default StoryUpload;

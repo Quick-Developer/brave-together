@@ -1,25 +1,129 @@
-.homepage-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    text-align: center;
-    
-    margin: 2rem;
+.homepage-wrapper {
+    position  : relative;
+    background: linear-gradient(90.14deg, rgba(65, 65, 65, 0.76) 37.72%, rgba(255, 255, 255, 0.5) 65.05%);
+}
 
-    .opening-text {
-        text-align: center;
-        font-size: 1.5rem;
+.homepage-wrapper::before {
+    content            : ' ';
+    display            : block;
+    position           : absolute;
+    left               : 0;
+    top                : 0;
+    width              : 100%;
+    height             : 100%;
+    opacity            : 0.5;
+    background-image   : url('../assets/images/homepage\ background.jpg');
+    background-repeat  : no-repeat;
+    background-position: 50% 0;
+    background-size    : cover;
+}
+
+.homepage-container {
+
+    position   : relative;
+    width      : 100%;
+    text-align : right;
+    padding    : 2vh 13vw 17vh 13vw;
+    font-weight: 500;
+    height: 100%;
+
+    .header {
+        display      : block;
+        font-style   : normal;
+        font-weight  : normal;
+        font-size    : 32px;
+        line-height  : 50px;
+        margin-bottom: 10px;
     }
-    
+
+    .sub-header {
+        display    : block;
+        font-size  : 20px;
+        line-height: 34px;
+    }
+
+    .content {
+        font-size  : 18px;
+        line-height: 34px;
+    }
+
+    .closing-text {
+        text-align: center;
+        margin-top: 5vh;
+    }
+
     button {
-        margin-top: 1rem;
-        padding: 1rem;
-        text-align: center;
-        background-color: #3692d4;
-        border-radius: 5px;
-        margin-left: 10px;
-        margin-right: 10px;
-        margin-bottom: 15px;
-        color: white;
+        margin-top      : 1rem;
+        padding         : 8px;
+        text-align      : center;
+        background-color: #d0541c;
+        border-radius   : 5px;
+        color           : white;
+        font-weight     : 700;
+        font-size       : initial;
+        border          : none;
+        width           : 75%;
     }
+
+    ul {
+        margin    : 0.75em 0;
+        padding   : 0 1em;
+        list-style: none;
+    }
+
+    li::before {
+        content     : "";
+        border-color: transparent #111;
+        border-style: solid;
+        border-width: 0.35em 10px 0.35em 0em;
+        display     : block;
+        height      : 0;
+        width       : 0;
+        left        : 1em;
+        top         : 1.2em;
+        position    : relative;
+    }
+
+    @media all and (max-width: 600px), (max-height: 550px) {
+
+        position        : absolute;
+        background-color: white;
+        padding: 37px;
+
+        table {
+            display: none;
+        }
+
+        .header {
+            text-align: center;
+            font-size: 18px;
+            line-height: 2;
+            font-weight: 500;
+        }
+
+        .content {
+            font-size: 14px;
+            line-height: 30px;
+        }
+
+        .sub-header {
+            font-size: 14px;
+        }
+
+        .closing-text {
+            font-size: 13px;
+            text-align: right;
+            margin: 0px;        
+        }
+
+        .logo {
+            margin: 15px;
+        }
+
+        button {
+            width: 100%;
+        }
+
+    }
+
 }

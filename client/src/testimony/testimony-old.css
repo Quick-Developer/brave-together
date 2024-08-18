@@ -1,0 +1,198 @@
+.testimony-container {
+  color: #003e6a;
+  direction: rtl;
+  background: #fbf9fa;
+}
+
+.testimony-container .testimony-content {
+  padding: 14px;
+}
+
+.testimony-container .testimony-content h3 {
+  padding-top: 4%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: 22px;
+  margin-right: 22px;
+  text-align: center;
+}
+
+.testimony-container .testimony-content .content-title {
+  color: #003e6a;
+  font-weight: bold;
+  font-size: 16px;
+  padding-top: 5%;
+  padding-bottom: 7%;
+}
+
+.testimony-container .testimony-content .content-body {
+  font-size: 14px;
+  color: #292929;
+}
+
+.testimony-container .choose-text {
+  margin: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  bottom: 2%;
+  width: 100%;
+  mix-blend-mode: normal;
+}
+
+.testimony-container .choose-text .choose-text-title {
+  margin: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  background: #003e6a;
+  color: #fbf9fa;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-style: unset;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 43px;
+  text-align: justify;
+  letter-spacing: 0.05em;
+  padding-left: 10%;
+  padding-right: 10%;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+
+.testimony-container .choose-text .free-text-container {
+  position: fixed;
+  bottom: 0px;
+  background: #dce2ea;
+  width: 100%;
+  mix-blend-mode: normal;
+  -webkit-box-shadow: 0px -4px 8px #c4c4c4;
+          box-shadow: 0px -4px 8px #c4c4c4;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.testimony-container .choose-text .free-text-container .back-to-options {
+  background: #dce2ea;
+  color: #003e6a;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 10px;
+  height: auto;
+  padding: 18px;
+  /* or 50% */
+  text-align: center;
+  letter-spacing: 0.05em;
+  border: 1px solid #003e6a;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  margin: 5%;
+}
+
+.testimony-container .choose-text .free-text-container .approv-free-text {
+  background: #003e6a;
+  color: #dce2ea;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 10px;
+  height: auto;
+  padding: 18px;
+  /* or 50% */
+  text-align: center;
+  letter-spacing: 0.05em;
+  border: 1px solid #003e6a;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-bottom: 5%;
+}
+
+.testimony-container .choose-text .texts-container {
+  margin: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  bottom: 0px;
+  background: #dce2ea;
+  width: 100%;
+  padding-top: 5%;
+  mix-blend-mode: normal;
+  -webkit-box-shadow: 0px -4px 8px #c4c4c4;
+          box-shadow: 0px -4px 8px #c4c4c4;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.testimony-container .choose-text .texts-container .optional-texts-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 90%;
+  margin-right: 10px;
+}
+
+.testimony-container .choose-text .texts-container .optional-texts-container .optional-text {
+  font-size: 15px;
+  text-align: right;
+  background: #dce2ea;
+  border-radius: 5px;
+  border: 1px solid #003e6a;
+  margin-bottom: 10px;
+  height: auto;
+  padding: 10px;
+  text-overflow: ellipsis;
+}
+
+.testimony-container .choose-text .texts-container .optional-texts-container .optional-text.free-choice {
+  background: #003e6a;
+  color: #dce2ea;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 10px;
+  height: auto;
+  padding: 18px;
+  /* or 50% */
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+.testimony-container .choose-text .texts-container .choose-text-screen-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.testimony-container .choose-text .texts-container .choose-text-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.testimony-container .choose-text .texts-container .close-icon {
+  position: absolute;
+  right: 14px;
+  width: 20px;
+  height: 20px;
+  background-size: 14px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/*# sourceMappingURL=testimony-old.css.map */

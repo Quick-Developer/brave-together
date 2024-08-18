@@ -1,0 +1,108 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+.selected-quotes {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  font-family: "Rubik", sans-serif;
+  line-height: 28px;
+  font-weight: 400;
+  background-color: white;
+}
+
+.selected-quotes .icon-container {
+  padding-top: 1rem;
+  height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.selected-quotes .icon-container img {
+  margin: 0 1.5rem 0;
+  height: 2rem;
+  width: 2rem;
+}
+
+.selected-quotes .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.selected-quotes .content h1 {
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.selected-quotes .content .or-section {
+  line-height: 28px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.selected-quotes .content .or-section span:before,
+.selected-quotes .content .or-section span:after {
+  background-color: black;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 100px;
+}
+
+.selected-quotes .content .or-section span:before {
+  right: 2em;
+}
+
+.selected-quotes .content .or-section span:after {
+  left: 2em;
+}
+
+.selected-quotes .content button {
+  background: #ff9466;
+  border-radius: 4px;
+  height: 55px;
+  width: 374px;
+  color: black;
+  font-weight: 700;
+  font-size: 20px;
+  border: none;
+  margin-bottom: 20px;
+}
+
+.quote {
+  cursor: pointer;
+  padding: 1rem;
+  height: 136px;
+  border: 1px solid black;
+  border-radius: 2px;
+  margin: 0 22px 1rem;
+  overflow: overlay;
+  background: #f5f5f5;
+}
+
+.quote p {
+  direction: rtl;
+  line-height: 28px;
+  font-size: 16px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+/*# sourceMappingURL=SelectedQuotes.css.map */

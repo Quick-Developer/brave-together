@@ -1,0 +1,73 @@
+.share-options-container .share-options-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  /* or 150% */
+  text-align: center;
+  margin-top: 45px;
+  color: #003e6a;
+}
+
+.share-options-container .image-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 50px;
+}
+
+.share-options-container .image-container .image-container-border {
+  padding: 20px;
+  background-color: #f5f5f8;
+}
+
+.share-options-container .share-options-drawer {
+  background-color: #dce2ea;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 220px;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.share-options-container .share-options-drawer .title {
+  direction: rtl;
+  text-align: center;
+  margin-top: 16px;
+  margin-bottom: 45px;
+  color: #003e6a;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.share-options-container .share-options-drawer .share-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.share-options-container .share-options-drawer .share-options .share-option-container {
+  padding: 5px;
+  -webkit-box-shadow: 1px 1px 2px black;
+          box-shadow: 1px 1px 2px black;
+  border-radius: 50%;
+}
+
+.share-options-container .share-options-drawer .share-options .share-option-container .share-option {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.share-options-container .share-options-drawer .share-options .share-option-container:hover {
+  -webkit-box-shadow: 2px 2px 15px black;
+          box-shadow: 2px 2px 15px black;
+}
+/*# sourceMappingURL=share.css.map */

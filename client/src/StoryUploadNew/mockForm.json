@@ -1,0 +1,58 @@
+{
+    "storyUpload":{
+        "mainHeader":{
+            "content":"welcome",
+            "color":"white",
+            "fontSize":"14vh"
+        }
+        ,
+        "form":[
+            {
+                "label":"כותרת",
+                "tag":"input",
+                "type":"text",
+                "name": "title"
+            },{
+                "label":"תוכן",
+                "tag":"textarea",
+                "rows":"4",
+                "cols":"50",
+                "name":"content"
+            },
+            {
+                "label":"תגיות",
+                "name":"tags",
+                "tag":"ReactTags",
+                "tags":[
+                    {"id":"1","text":"tag-1"},
+                    {"id":"2","text":"tag-2"},
+                    {"id":"3","text":"tag-3"}
+                ],
+                "suggestions":[
+                    {"id": "1" , "text":"sug-1"},
+                    {"id": "2" , "text":"sug-2"},
+                    {"id": "3" , "text":"sug-3"}
+                ],
+                "delimeters":[
+                    "ENTER"
+                ],
+                "placeholder":"הוסף תגיות"
+            },
+            {
+                "label":"קטגוריה",
+                "name":"category",
+                "tag" :"select",
+                "options":[
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                ]
+            }
+
+        
+
+        ]
+
+    }
+}

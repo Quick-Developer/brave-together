@@ -37,7 +37,7 @@ class Template extends React.Component {
                         mock.map((template, index) => {
                             return (
                                 <div key={index} onClick={() => this.handleTemplateClick(template)}>
-                                    <img className='template-img' src={template.templateImg}></img>
+                                    <img alt='img' className='template-img' src={template.templateImg}></img>
                                 </div>
                             )
                         })

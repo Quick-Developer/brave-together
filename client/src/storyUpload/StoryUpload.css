@@ -1,53 +1,85 @@
-.story-container {
-  background-color: rgba(255, 255, 255, 0.7);
-  padding: 30px;
-  margin-top: 8%;
-  width: 50%;
-  height: 55vh;
-  border-radius: 20px;
-  /* font-family: Arial, Helvetica, sans-serif; */
-   font-family: Arial;
-  /* text-align: center; */
-  /* display: block; */
-  margin-left: auto;
-  margin-right: auto;
-  font-weight: bold;
+.story-upload-container{
+    margin:  auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    direction: rtl;
+    padding: 20px;
+    max-width: 750px;
 }
 
-body {
-  /* background: url("../../../public/images/back.jpg") no-repeat center center fixed; */
-  background: url("back.jpg") no-repeat center center fixed;
-
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+.page-main-header{
+    font-weight: 600;
+    font-size: 15px;
+    text-align: right;
 }
 
-input {
+.input-container{
+    display: flex;
+    flex-direction: column;
+}
+
+input[type=checkbox]:checked + label{
+    background-color: rgba(63, 63, 63, 1);
+}
+
+.field-label{
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 7px;
+    margin-top: 15px;
+}
+
+textarea{
+    background-color: rgba(245, 245, 245, 1);
+}
+
+.input-field{
+    display: block;
+    background-color: rgba(245, 245, 245, 1);
+    width: 100%;
+    border: 1px solid gray;
+}
+
+.story-checkbox input{
+    display: none;
+}
+
+.story-checkboxes{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.story-checkbox label{
+    background-color: rgba(196, 196, 196, 1);
+    padding: 5px 10px;
+    border-radius: 4px;
+  }
+.story-container input {
   width: inherit;
   border: 2px solid #0292E6;
   border-radius: 5px;
   /* border: 2px rgb(206, 206, 252) double; */
 }
 
-textarea {
+.story-container textarea {
   border: 2px solid #0292E6;
   border-radius: 5px;
   width: inherit;
   text-align: right;
 }
 
-label {
+.story-container label {
   font-size: 14px;
   margin-bottom: 5px;
 }
 
-.content {
+.story-container .content {
   left: 30%;
 }
 
-form {
+.story-container form {
   /* display: inline-block; */
   /* position: relative; */
   /* background-color: rgb(231, 249, 255); */
@@ -59,41 +91,52 @@ form {
   /* padding: 10px 10px; */
 }
 
-p {
+.story-container p {
   font-size: small;
   text-align: right;
 }
 
-button{
+.story-container button{
     border-color: black;
     border-width: 1px;
     background: #1542C9;
     padding: 3px 60px;
     color: white;
-    border-radius: 8px;
-    
-  /* position: fixed;
-  /* text-align: center; */
-  /* left: 45%;
-  bottom: 20%;
-  line-height: 45px;  */
-
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
 }
 
-#button{
-  /* position: absolute;
-  /* bottom: 55px; */
-  /* position: fixed; */
+.submit-story{
+    background-color: rgba(205, 83, 31, 1);
+    color: white;
+    height: 50px;
+    font-weight: bold;
+    margin-top: 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 20px;
+    width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+    .submit-story{
+        width: 250px;
+        position: absolute;
+        top: 70%;
+        left: 0;
+        border-radius: 0 4px 4px 0;
+    }
+    .story-upload-container{
+        margin-right: 5px;
+    }
+  }
+.story-container #button{
   display: flex;
-  /* align-items: center; */
   justify-content: center;
-  /* text-align: center; */
-  /* left: 45%; */
-  /* bottom: 20%; */
-  /* line-height: 45px;  */
 } 
 
-button:hover{
+.story-container button:hover{
   background-color: #0292E6;
 }
 
@@ -106,7 +149,7 @@ button:hover{
     margin-top: 0%;
   }
 
-  textarea {
+  .story-container  textarea {
     height: 20em;
   }
 }

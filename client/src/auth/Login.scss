@@ -1,0 +1,64 @@
+.login {
+    background-color: white;
+    .login-container {
+        min-height: 90vh;
+    }
+    .head {
+        h2 {
+            font-size: 22px;
+        }
+        img {
+            width: 182px;
+            height: 58px;
+            margin-bottom: 30px;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+    }
+
+    .google-login {
+        height: 3rem;
+        border: none;
+        box-shadow: none !important;
+        cursor: pointer !important;
+    }
+    .google-login-container {
+        cursor: pointer !important;
+    }
+
+    & .name-container {
+        display: flex;
+    }
+
+    & .first-name {
+        margin-left: 20px !important;
+    }
+
+    & .MuiBox-root .css-bk9fzy {
+        margin-bottom: 20px;
+    }
+
+    & label {
+        width: 100%;
+        display: flex;
+    }
+
+    & .button {
+        margin-top: 10px;
+        width: 100%;
+        height: 50px;
+        font-size: 23px;
+        color: white;
+    }
+}
+
+
+
+@media screen and (min-width: 600px) {
+    .login-container {
+        width: 45%;
+        margin: 0 auto;
+        min-height: 90vh;
+    }
+}

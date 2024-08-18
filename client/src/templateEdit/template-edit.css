@@ -1,0 +1,178 @@
+.template-edit-container .template-edit-title {
+  padding: 14px;
+  margin-top: 20px;
+  direction: rtl;
+  text-align: center;
+  color: #003e6a;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.template-edit-container .image-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.template-edit-container .image-container .image-body {
+  border: 2px solid #003e6a;
+  border-radius: 5px;
+}
+
+.template-edit-container .colorPicker {
+  margin-left: auto;
+  margin-right: 10%;
+}
+
+.template-edit-container .fontSizes {
+  margin-left: auto;
+  margin-right: 30%;
+  width: 100px;
+}
+
+.template-edit-container .drawer-container {
+  background-color: #dce2ea;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  height: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.template-edit-container .drawer-container .drawer-content .drawer-content-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.template-edit-container .drawer-container .drawer-content .drawer-content-header .drawer-content-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  color: #003e6a;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 7px;
+}
+
+.template-edit-container .drawer-container .drawer-content .drawer-content-header .drawer-content-close {
+  position: absolute;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  right: 14px;
+  width: 20px;
+  height: 20px;
+  background-size: 14px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.template-edit-container .drawer-container .drawer-content .edit-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 20px;
+}
+
+.template-edit-container .drawer-container .drawer-content .edit-options .edit-option {
+  margin: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 25px;
+  height: 25px;
+}
+
+.template-edit-container .drawer-container .drawer-content .edit-options .edit-option-text {
+  text-align: center;
+  color: #003e6a;
+}
+
+.template-edit-container .drawer-container .drawer-content .save-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #003e6a;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 15px;
+}
+
+.template-edit-container .drawer-container .drawer-content .save-buttons > div {
+  padding: 15px;
+  margin-bottom: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.template-edit-container .drawer-container .drawer-content .share-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid #003e6a;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 15px;
+}
+
+.template-edit-container .drawer-container .drawer-content .share-buttons > div {
+  padding: 15px;
+  margin-bottom: 5px;
+  color: #003e6a;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.template-edit-container .drawer-container .drawer-content .drawer-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-right: 10px;
+  margin-left: 37px;
+}
+
+.template-edit-container .drawer-container .drawer-content .edit-option:hover, .template-edit-container .drawer-container .drawer-content .edit-option-text:hover, .template-edit-container .drawer-container .drawer-content .share-buttons:hover {
+  cursor: pointer;
+}
+/*# sourceMappingURL=template-edit.css.map */

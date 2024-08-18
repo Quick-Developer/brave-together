@@ -4,7 +4,6 @@ import './testimony.scss';
 
 import mock from './mock';
 import BackButton from '../backButton/backButton';
-import axios from 'axios';
 
 const closeButtonIcon='images/icons/CloseIcon.png'
 
@@ -101,10 +100,9 @@ class Testimony extends React.Component {
 
     handelSelectionChange = () => {
         //chack text "selection = window.getSelection().toString();"
-        const freeSelection = window.getSelection().toString()
-        if (freeSelection) {
-            this.setState({ freeSelection })
-        }
+        const freeSelection = window.getSelection().toString();
+        if(freeSelection)
+        this.setState({ freeSelection })
     }
 
     setButtonContent = (choice) => {

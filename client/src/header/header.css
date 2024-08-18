@@ -1,0 +1,35 @@
+.header-container {
+  padding-top: 10px;
+  width: 100%;
+  direction: rtl;
+  background-color: #040438;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  font-size: 20px;
+}
+
+.header-container .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.header-container .navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  color: #000;
+}
+
+.header-container .navbar ul .nav-item .nav-link {
+  color: white;
+}
+
+.header-container img {
+  width: 35%;
+  float: left;
+}
+/*# sourceMappingURL=header.css.map */

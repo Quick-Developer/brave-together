@@ -1,0 +1,49 @@
+.about .wrapper {
+  display: -ms-grid;
+  display: grid;
+  width: 60%;
+  height: 1500px;
+  -ms-grid-columns: (auto)[2];
+      grid-template-columns: repeat(2, auto);
+  -ms-grid-rows: 60px (auto)[2];
+      grid-template-rows: 60px repeat(2, auto);
+  grid-gap: 2.5em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: start;
+      align-content: start;
+  margin: 80px auto 0 auto;
+  padding: 10px;
+}
+
+.about .wrapper > div:nth-child(1) {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 3;
+  margin: 0 auto 0 auto;
+}
+
+.about .card {
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 5px;
+  width: 345px;
+  padding: 15px 10px 5px 25px;
+}
+
+.about .card:hover {
+  -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.about img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: auto;
+}
+/*# sourceMappingURL=about.css.map */
